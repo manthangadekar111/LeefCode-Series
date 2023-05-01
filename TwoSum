@@ -26,6 +26,6 @@ public static int[] twosum(int [] nums , int target) {
     
     
     -----------------------------
-    Expected Output  : [0,1]
-    actual Ouput     : [0,1] 
+    Expected Output  : O(n)
+    actual Ouput     : O(1) 
    
