@@ -1,0 +1,36 @@
+problem statement : 
+
+you are given an integer array "ARR" of size "N" and an integer "S". your task is to return the list of all pairs of element such that each 
+sum of element of each pairs equals 'S'.
+
+Sample Input 1:
+ 5
+1 2 3 4 5
+Sample Output 1:
+1 4
+2 3
+
+Explaination For Sample Output 1:
+Here, 1 + 4 = 5
+      2 + 3 = 5
+Hence the output will be, (1,4) , (2,3).
+
+
+import java.io.*;
+import java.util.* ;
+
+public class Solution{
+     public static List<int[]> pairSum(int[] arr, int s) {
+        int n = arr.length;
+        Arrays.sort(arr);
+        List<int[]> resultstore= new ArrayList<>();
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(i<=j && arr[i]+arr[j]==s){
+                   resultstore.add(new int[]{arr[i], arr[j]});
+                }
+            }
+        }
+        return resultstore;
+    }
+}
